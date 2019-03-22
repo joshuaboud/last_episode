@@ -10,6 +10,6 @@ fi
 
 rm -f $1/0_last_episode-*
 
-lastep=$(ls -u $1 | head -n 1)
+lastep=$(ls -pu $1 | grep -v / | head -n 1)
 
 printf "%b" '\x47' > "$1/0_last_episode-$lastep.mp4"
