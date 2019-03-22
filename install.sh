@@ -18,7 +18,7 @@ echo "List directories to be checked separated by spaces:"
 read dirs
 
 for dir in $dirs; do
-  echo "ExecStart=/bin/lastep.sh $dir" >> /etc/systemd/system/lastep.service
+  echo "ExecStart=/usr/bin/env bash /bin/lastep.sh $dir" >> /etc/systemd/system/lastep.service
 done
 
 echo "
