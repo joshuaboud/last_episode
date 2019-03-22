@@ -7,6 +7,8 @@ fi
 
 cp lastep.sh /bin/lastep.sh
 
+chmod u+x /bin/lastep.sh
+
 echo "[Unit]
 Description=Launches lastep.sh with directories to report last accessed episode in
 After=network.target
@@ -18,7 +20,7 @@ echo "List directories to be checked separated by spaces:"
 read dirs
 
 for dir in $dirs; do
-  echo "ExecStart=/usr/bin/env bash /bin/lastep.sh $dir" >> /etc/systemd/system/lastep.service
+  echo "ExecStart=/bin/lastep.sh $dir" >> /etc/systemd/system/lastep.service
 done
 
 echo "
