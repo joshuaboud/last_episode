@@ -14,7 +14,7 @@ Description=Launches lastep.sh with directories to report last accessed episode 
 After=network.target
 
 [Service]
-Type=oneshot" >> /etc/systemd/system/lastep.service
+Type=oneshot" > /etc/systemd/system/lastep.service
 
 echo "List directories to be checked separated by spaces:"
 read dirs
