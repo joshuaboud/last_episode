@@ -21,7 +21,8 @@ for dir in $dirs; do
   echo "ExecStart=/bin/lastep.sh $dir" >> /etc/systemd/system/lastep.service
 done
 
-echo "[Install]
+echo "
+[Install]
 WantedBy=multi-user.target" >> /etc/systemd/system/lastep.service
 
 systemctl enable lastep
