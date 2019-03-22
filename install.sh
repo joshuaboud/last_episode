@@ -10,7 +10,7 @@ cp lastep.sh /bin/lastep.sh
 chmod u+x /bin/lastep.sh
 
 echo "[Unit]
-Description=Launches lastep.sh with directories to report last accessed episode in
+Description=Creates empty mp4 file indicating the last watched episode
 After=network.target
 
 [Service]
